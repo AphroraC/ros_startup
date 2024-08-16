@@ -8,7 +8,7 @@
       "includePath": [
         "/opt/ros/noetic/include/**",
         "/home/aphrora/ros_workspace/src/helloworld/include/**",
-        "/usr/include/**",
+        // "/usr/include/**",
         "/home/aphrora/ros_workspace/devel/include/**"
       ],
       "name": "ROS",

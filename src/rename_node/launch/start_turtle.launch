@@ -1,0 +1,10 @@
+<launch>
+<node pkg="turtlesim"  type="turtlesim_node"  name="turtle_sim"                   />
+<node pkg="turtlesim"  type="turtlesim_node"  name="t1"                   />
+<node pkg="turtlesim"  type="turtlesim_node"  name="turtle_sim" ns="namespace_aaa"                  />
+<node pkg="turtlesim"  type="turtlesim_node"  name="t2"  ns="namespace_bbb"                 />
+
+
+
+
+</launch>

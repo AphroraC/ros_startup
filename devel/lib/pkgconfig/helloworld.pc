@@ -1,0 +1,8 @@
+prefix=/home/aphrora/ros_workspace/devel
+
+Name: helloworld
+Description: Description of helloworld
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/aphrora/ros_workspace/devel/setup.sh

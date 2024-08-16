@@ -1,0 +1,13 @@
+<launch>
+
+<group ns="first">
+<node pkg="turtlesim" type="turtlesim_node"  name="my_turtle"   output="screen"   respawn="false" respawn_delay="3" required="true" ns="hello"/>
+<node pkg="turtlesim" type="turtle_teleop_key"  name="my_key"   output="screen"   />
+</group>
+
+<group ns="second">
+<node pkg="turtlesim" type="turtlesim_node"  name="my_turtle"   output="screen"   respawn="false" respawn_delay="3" required="true" ns="hello"/>
+<node pkg="turtlesim" type="turtle_teleop_key"  name="my_key"   output="screen"    />
+</group>
+
+</launch>

@@ -1,0 +1,12 @@
+<launch>
+
+<!-- <param  name="A" value="0.5"           />
+<param  name="b" value="0.5"           />
+<param  name="C" value="0.5"           /> -->
+
+<arg ="car_len"  default="0.55"/>
+<param name="A"  value="$(arg car_len)"/>
+<param name="B"  value="$(arg car_len)"/>
+<param name="C"  value="$(arg car_len)"/>
+
+</launch>

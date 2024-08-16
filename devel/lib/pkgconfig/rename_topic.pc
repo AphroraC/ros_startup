@@ -1,0 +1,8 @@
+prefix=/home/aphrora/ros_workspace/devel
+
+Name: rename_topic
+Description: Description of rename_topic
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

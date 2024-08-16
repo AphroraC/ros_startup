@@ -1,0 +1,4 @@
+<launch>
+<rosparam command="dump"  file="$(find launch_basic)/launch/params_out.yaml"       />
+<rosparam command="delete"  param="bg_B"      />
+</launch>

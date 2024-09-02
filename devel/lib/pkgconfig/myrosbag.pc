@@ -1,0 +1,8 @@
+prefix=/home/aphrora/ros_workspace/devel
+
+Name: myrosbag
+Description: Description of myrosbag
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

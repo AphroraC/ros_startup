@@ -1,0 +1,103 @@
+<robot name="mycar">
+    <link name="base_footprint">
+        <visual>
+            <geometry>
+                <sphere radius="0.001"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="base_link">
+        <visual>
+            <geometry>  
+                <cylinder radius="0.1" length="0.08" />
+            </geometry>
+            <origin  xyz="0 0 0"  rpy="0 0 0" />
+            <material name="baselink_color">
+                <color rgba="0.5 0.5 0.2 0.5" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="link2footprint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link"  />
+        <origin xyz="0 0 0.05" rpy="0 0 0"  />
+    </joint>
+
+     <link name="left_wheel">
+        <visual>
+            <geometry>  
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+            <origin  xyz="0 0 0"  rpy="1.5708 0 0" />
+            <material name="wheel_color">
+                <color rgba="0 0 0 0.5" />
+            </material>
+        </visual>
+    </link>
+     <joint name="left2link" type="continuous">
+        <parent link="base_link" />
+        <child link="left_wheel"  />
+        <origin xyz="0 0.08 -0.02" rpy="0 0 0"  />
+        <axis xyz="0 0 0.5" />
+    </joint>
+
+    <link name="right_wheel">
+        <visual>
+            <geometry>  
+                <cylinder radius="0.04" length="0.02" />
+            </geometry>
+            <origin  xyz="0 0 0"  rpy="1.5708 0 0" />
+            <material name="wheel_color">
+                <color rgba="0 0 0 0.5" />
+            </material>
+        </visual>
+    </link>
+
+     <joint name="right2link" type="continuous">
+        <parent link="base_link" />
+        <child link="right_wheel"  />
+        <origin xyz="0 -0.08 -0.02" rpy="0 0 0"  />
+        <axis xyz="0 0 0.5" />
+    </joint> 
+    <link name="front_wheel">
+        <visual>
+            <geometry>  
+                <sphere radius="0.02" />
+            </geometry>
+            <origin  xyz="0 0 0"  rpy="0 0 0" />
+            <material name="wheel_color">
+                <color rgba="0 0 0 0.5" />
+            </material>
+        </visual>
+    </link>
+     <joint name="front2link" type="continuous">
+        <parent link="base_link" />
+        <child link="front_wheel"  />
+        <origin xyz="0.08 0 -0.04" rpy="0 0 0"  />
+        <axis xyz="0 0 0.5" />
+    </joint> 
+    <link name="rear_wheel">
+        <visual>
+            <geometry>  
+                <sphere radius="0.02" />
+            </geometry>
+            <origin  xyz="0 0 0"  rpy="0 0 0" />
+            <material name="wheel_color">
+                <color rgba="0 0 0 0.5" />
+            </material>
+        </visual>
+    </link>
+     <joint name="rear2link" type="continuous">
+        <parent link="base_link" />
+        <child link="rear_wheel"  />
+        <origin xyz="-0.08 0 -0.04" rpy="0 0 0"  />
+        <axis xyz="0 0 0.5" />
+    </joint> 
+
+
+
+
+
+</robot>

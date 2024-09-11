@@ -7,6 +7,7 @@ int main(int argc, char  *argv[])
     ros::NodeHandle nh;
 
     ros::Rate r(0.3);
+    
     while (ros::ok())
     {
         ROS_DEBUG("DEBUG DEBUG DEBUG");

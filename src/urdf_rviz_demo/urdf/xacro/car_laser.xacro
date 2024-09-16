@@ -1,0 +1,53 @@
+<robot name="mycar"
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- <xacro:include filename="car_base.xacro"/> -->
+    <xacro:property name="support_radius" value="0.01"/>
+    <xacro:property name="support_length" value="0.1"/>
+    <xacro:property name="laser_radius" value="0.03"/>
+    <xacro:property name="laser_length" value="0.05"/>
+
+    <xacro:property name="joint_support_x" value="0"/>
+    <xacro:property name="joint_support_y" value="0"/>
+    <xacro:property name="joint_support_z" value="0.04+${support_length}*0.5 "/>
+
+    <xacro:property name="laser_support_x" value="0"/>
+    <xacro:property name="laser_support_y" value="0"/>
+    <xacro:property name="laser_support_z" value="${support_length}*0.5+${laser_length}*0.5"/>
+
+    <link name="support">
+        <visual>
+            <geometry>
+                <cylinder radius="${support_radius}" length="${support_length}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="yellow">
+                <color rgba="0.8 0.2 0.0 0.5"/>
+            </material>
+        </visual>
+    </link>
+    <joint name="support2base" type="fixed">
+        <parent link="base_link"/>
+        <child link="support"/>
+        <origin xyz="${joint_support_x} ${joint_support_y} ${joint_support_z} " rpy="0.0 0.0 0.0"/>
+    </joint>
+
+
+    <link name="laser">
+        <visual>
+            <geometry>
+                <cylinder radius="${laser_radius}" length="${laser_length}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 0.5"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="laser2support" type="fixed">
+        <parent link="support" />
+        <child link="laser" />
+        <origin xyz="${laser_support_x} ${laser_support_y} ${laser_support_z}" rpy="0 0 0" />
+    </joint>
+
+</robot>

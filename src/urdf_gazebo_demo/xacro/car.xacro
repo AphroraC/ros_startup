@@ -3,5 +3,9 @@
     <xacro:include filename="car_base.xacro"/>
     <xacro:include filename="car_camera.xacro"/>
     <xacro:include filename="car_laser.xacro"/>
+    <xacro:include filename="gazebo/move.xacro"/>
+    <xacro:include filename="gazebo/laser.xacro"/>
+    <xacro:include filename="gazebo/camera.xacro"/>
+    <xacro:include filename="gazebo/kinect.xacro"/>
 
 </robot>

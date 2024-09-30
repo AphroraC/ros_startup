@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find urdf_gazebo_demo)/launch/env.launch" />
+    <node pkg="joint_state_publisher" name="joint_state_publisher" type="joint_state_publisher" />
+    <node pkg="robot_state_publisher" name="robot_state_publisher" type="robot_state_publisher" />
+    <node pkg="rviz" type="rviz" name="rviz" />
+   <include file="$(find nav_demo)/launch/map_server.launch"/> 
+   <include file="$(find nav_demo)/launch/amcl_diff.launch"/> 
+
+
+</launch>

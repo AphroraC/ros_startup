@@ -1,4 +1,4 @@
-prefix=/home/aphrora/ros_workspace/devel
+prefix=/home/aphrora/DynamicX/ros_startup/devel
 
 Name: launch_basic
 Description: Description of launch_basic

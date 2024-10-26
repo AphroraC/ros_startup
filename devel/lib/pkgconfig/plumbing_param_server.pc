@@ -1,4 +1,4 @@
-prefix=/home/aphrora/ros_workspace/devel
+prefix=/home/aphrora/DynamicX/ros_startup/devel
 
 Name: plumbing_param_server
 Description: Description of plumbing_param_server

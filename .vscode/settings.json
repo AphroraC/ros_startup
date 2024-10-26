@@ -1,5 +1,5 @@
 {
-  "cmake.sourceDirectory": "/home/aphrora/ros_workspace/src/helloworld",
+  "cmake.sourceDirectory": "/home/aphrora/DynamicX/ros_startup/src",
   "python.autoComplete.extraPaths": [
     "/opt/ros/noetic/lib/python3/dist-packages"
   ],
